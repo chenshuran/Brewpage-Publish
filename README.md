@@ -21,7 +21,7 @@ Original author: Ryan Chen
 - 自动使用 BrewPage JSON API，而不是容易失败的原始 HTML 直传。
 - 校验发布后的链接是否真实返回目标页面。
 - 在短链接异常时，使用可验证的 `/api/html/{namespace}/{id}` 页面链接。
-- 支持用户主动要求时，为发布页面追加轻量署名水印。
+- 默认为发布页面追加轻量署名水印，用户明确要求时可不加。
 
 ## 安装
 
@@ -67,10 +67,10 @@ Markdown 也可以：
 用 $brewpage-publish 把这个 Markdown 文档发布到 BrewPage。
 ```
 
-如果希望页面底部带作者水印，可以明确说明：
+发布页面默认会带作者水印。如果希望不带水印，可以明确说明：
 
 ```text
-发布到 BrewPage，并加上 Ryan Chen 的署名水印。
+发布到 BrewPage，这次不要加水印。
 ```
 
 ## 注意事项
@@ -118,7 +118,7 @@ Please retain this attribution when redistributing, modifying, or publishing thi
 - Use the BrewPage JSON API instead of fragile raw HTML uploads.
 - Verify that the published URL returns the intended page.
 - Fall back to the verifiable `/api/html/{namespace}/{id}` URL when the short link does not serve the document directly.
-- Add a lightweight attribution watermark only when the user explicitly asks for it.
+- Add a lightweight attribution watermark by default, unless the user explicitly asks to omit it.
 
 ## Installation
 
@@ -164,10 +164,10 @@ Markdown is supported too:
 Use $brewpage-publish to publish this Markdown document to BrewPage.
 ```
 
-To include an attribution watermark, ask explicitly:
+Published pages include the attribution watermark by default. To omit it, ask explicitly:
 
 ```text
-Publish this to BrewPage and add a Ryan Chen attribution watermark.
+Publish this to BrewPage without a watermark.
 ```
 
 ## Notes

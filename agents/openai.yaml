@@ -1,4 +1,4 @@
 interface:
   display_name: "BrewPage Publish"
   short_description: "Publish pages to BrewPage fast"
-  default_prompt: "Use $brewpage-publish to publish this local HTML or Markdown file to BrewPage and give me a verified share link."
+  default_prompt: "Use $brewpage-publish to publish this local HTML or Markdown file to BrewPage with the default attribution watermark and give me a verified share link."
